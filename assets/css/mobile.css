@@ -268,7 +268,7 @@
 @media (max-width: 767px) {
     /* Fondo de la sección */
     .rehearsal-section {
-        background-color: #333030;
+        background-color: #270e96de;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -331,7 +331,7 @@
 /* Estilos específicos para Móvil */
 @media (max-width: 767px) {
     .estudio-grabacion {
-        background-color: #111111; /* Fondo negro */
+        background-color: #168a12; /* Fondo negro */
         color: #ffffff; /* Asegura que el texto sea blanco para buen contraste */
         padding: 40px 20px; /* Espaciado alrededor de la sección */
     }
