@@ -331,7 +331,7 @@
 /* Estilos específicos para Móvil */
 @media (max-width: 767px) {
     .estudio-grabacion {
-        background-color: #000000; /* Fondo negro */
+        background-color: #c92121; /* Fondo negro */
         color: #ffffff; /* Asegura que el texto sea blanco para buen contraste */
         padding: 40px 20px; /* Espaciado alrededor de la sección */
     }
