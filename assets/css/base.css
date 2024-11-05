@@ -313,7 +313,7 @@ body {
 .rehearsal-section {
     width: 100%;
     height: 100vh;
-    background-image: url('/img/Fondo.jpeg');
+    background-image: url('/img/fondo.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -439,14 +439,14 @@ h1#rehearsal-room:hover {
 .estudio-grabacion {
     width: 100%;
     height: 100vh;
-    background-image: url('/img/Batería.jpeg');
+    background-image: url('/img/bateria.jpeg');
 }
 
 /* Estilos para la sección de Estudio de Grabación */
 .estudio-grabacion {
     width: 100%;
     height: 100vh;
-    background-image: url('/img/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg');
+    background-image: url('/img/mesados.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
