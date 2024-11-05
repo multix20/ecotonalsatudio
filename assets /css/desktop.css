@@ -1,0 +1,191 @@
+/* Container adjustment for tablets/desktops */
+.container {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho del navbar */
+    max-width: 1200px; /* Ajusta este valor según tus necesidades para limitar el ancho máximo */
+    margin: 0 auto; /* Centra el contenedor dentro de la página */
+    display: flex; /* Flexbox para organizar el contenido dentro del contenedor */
+    align-items: flex-start; /* Alinea los elementos verticalmente hacia la parte superior */
+    justify-content: space-between; /* Alinea logo, enlaces y botón */
+    gap: 2rem; /* Espacio entre los elementos del contenedor */
+    padding-top: 0; /* Reducir o eliminar el padding superior */
+    padding-bottom: 0; /* Reducir o eliminar el padding inferior */
+}
+
+/* Estilo básico para los enlaces */
+.enlace {
+    color: #ffffff; /* Color blanco para el texto */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 2rem; /* Tamaño del texto */
+    font-weight: bold; /* Negrita para resaltar */
+    padding: 15px 40px; /* Espacio alrededor del texto */
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Borde blanco semitransparente */
+    border-radius: 30px; /* Bordes redondeados */
+    background: rgba(0, 0, 0, 0.3); /* Fondo oscuro con algo de transparencia */
+    transition: all 0.3s ease; /* Transición suave para los efectos */
+    text-align: center; /* Centrar el texto */
+    width: 80%; /* Asegura que todos los enlaces tengan el mismo ancho */
+    max-width: 300px; /* Ancho máximo para pantallas grandes */
+    display: inline-block; /* Asegura que el padding y el borde se apliquen correctamente */
+}
+
+
+/* Navbar adjustments for desktop */
+.nav {
+    background: radial-gradient(circle, rgba(15, 13, 13, 0.9), rgba(92, 76, 70, 0.7));
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: all 0.4s ease;
+    
+}
+
+/* Contenedor para los enlaces: asegúrate de que se alineen horizontalmente */
+.main_list {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los enlaces en el navbar */
+    flex-grow: 1;
+}
+
+.main_list ul {
+    display: flex;
+    flex-direction: row; /* Asegura la disposición horizontal */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main_list ul li {
+    margin-right: 2rem; /* Espacio entre los enlaces */
+    width: auto;
+    text-align: left;
+}
+
+/* Logo adjustments */
+.logo a img {
+    max-width: 200px; /* Ajusta este valor al tamaño deseado */
+    height: auto;
+    margin: 10px auto 0 auto; /* Añade un margen superior de 10px */
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    top: -30px;
+}
+
+/* Estilos para el botón "Reserva" */
+.reserva {
+    margin-left: auto; /* Empuja "Reserva" hacia el extremo derecho */
+}
+
+.reserva a {
+    background-color: rgb(24, 150, 45);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.reserva a:hover {
+    background-color: rgb(100, 187, 78); /* Cambia el color al pasar el mouse */
+}
+
+/* General adjustments for desktop */
+.myH2 {
+    font-size: 4rem;
+}
+
+.myP {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+/* Ajustes para el contenedor de los enlaces */
+.nav-group {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    flex-grow: 1;
+    width: 100%;
+    max-width: none;
+    gap: 2rem;
+}
+
+/* Estilo minimalista para los enlaces del navbar en la versión de escritorio */
+.navlinks .nav-item {
+    color: #d1d1d1; /* Texto negro para mejor legibilidad y contraste */
+    text-decoration: none;
+    font-size: 2rem; /* Tamaño estándar para el texto */
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-right: 3rem; /* Añade espacio adicional entre los enlaces */
+}
+
+
+.navlinks .nav-item:hover {
+    color: #555555; /* Color ligeramente más oscuro al pasar el mouse */
+}
+
+.treble-clef {
+    font-size: 5rem; /* Ajusta el tamaño de la llave de sol */
+    color: #5a4910; /* Color brillante para que destaque */
+}
+
+#ecotonal-studio {
+    font-size: 5rem; /* Ajusta el tamaño según necesites */
+    color: #35ff02f5; /* Cambiado a color */
+    display: inline-block;
+    animation: fireText 2s forwards; /* Duración de la animación */
+    font-weight: bold;
+    letter-spacing: 3px; /* Espacio entre letras para resaltar el efecto */
+}
+
+@keyframes fireText {
+    0% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    10%, 20% {
+        opacity: 0.3;
+        text-shadow: 0 0 3px #ff0000;
+    }
+    30%, 40% {
+        opacity: 0.5;
+        text-shadow: 0 0 6px #ff6600, 0 0 10px #ff6600;
+    }
+    50%, 60% {
+        opacity: 0.8;
+        text-shadow: 0 0 8px #ffcc00, 0 0 15px #ff6600, 0 0 20px #ff0000;
+    }
+    70%, 80% {
+        opacity: 1;
+        text-shadow: 0 0 12px #ff6600, 0 0 18px #ffcc00, 0 0 25px #ff0000;
+    }
+    90%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 15px #ffcc00, 0 0 20px #ff6600, 0 0 30px #ff0000;
+    }
+}
+
+/* Estilos específicos para versión de escritorio */
+@media (min-width: 768px) {
+    .contenido-estudio-grabacion {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .imagen-estudio-grabacion {
+        order: 1; /* Video a la izquierda */
+        margin-right: 0;
+    }
+
+    .texto-estudio-grabacion {
+        order: 2; /* Texto a la derecha */
+        padding: 20px;
+    }
+}

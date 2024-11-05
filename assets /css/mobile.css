@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+
+/* Navbar adjustments for mobile */
+.nav {
+    background-color: transparent; 
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.navTrigger {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    animation: outT 0.8s backwards;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    animation: outM 0.8s backwards;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    animation: outBtm 0.8s backwards;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    animation: inBtm 0.8s forwards;
+}
+
+/* Navbar content for mobile */
+.nav div.logo {
+    margin-left: 15px;
+}
+
+.nav div.main_list {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+
+.nav div.show_list {
+    height: auto;
+    display: none;
+}
+
+.nav div.main_list ul {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #111111;
+    background-position: center top;
+}
+
+.nav div.main_list ul li {
+    width: 100%;
+    text-align: right;
+}
+
+.nav div.main_list ul li a {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.nav div.media_button {
+    display: block;
+}
+
+/* Responsive text adjustments */
+.myP {
+    padding: 100%;
+}
+
+/* Keyframes for menu animations */
+@keyframes inM {
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(45deg); }
+}
+
+@keyframes outM {
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(45deg); }
+}
+
+@keyframes inT {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(9px) rotate(0deg); }
+    100% { transform: translateY(9px) rotate(135deg); }
+}
+
+@keyframes outT {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(9px) rotate(0deg); }
+    100% { transform: translateY(9px) rotate(135deg); }
+}
+
+@keyframes inBtm {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-9px) rotate(0deg); }
+    100% { transform: translateY(-9px) rotate(135deg); }
+}
+
+@keyframes outBtm {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-9px) rotate(0deg); }
+    100% { transform: translateY(-9px) rotate(135deg); }
+}
+
+.logo a img {
+    max-width: 100px; /* Ajusta este valor al tamaño deseado */
+    height: auto;
+    margin: 10px auto 0 auto; /* Añade un margen superior de 10px */
+    display: block;
+    vertical-align: middle;
+    position: relative;
+}
+
+
+/* Estilos específicos para la versión móvil */
+@media (max-width: 768px) {
+    
+    /* Ajuste para la sección home */
+    .home {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Alinea el contenido desde el inicio para tener control del margen */
+        align-items: center;
+        height: auto; /* Ajusta la altura automáticamente según el contenido */
+        padding-top: 26rem; /* Espacio adicional bajo el navbar */
+    }
+
+    /* Ocultar la caja-uno completamente */
+    .caja-uno {
+        display: none;
+    }
+
+    /* Ajustes para la caja-dos */
+    .caja-dos {
+        width: 90%; 
+        padding: 15px 20px; 
+        margin-left: -50px;
+        margin-top: -10rem; /* Reduce el margen superior para que esté más arriba */
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        background: rgba(0, 0, 0, 0.3); /* Fondo oscuro con transparencia */
+        border-radius: 30px; /* Bordes redondeados */
+        animation: fadeInFromCenter 1.5s ease-in-out; /* Animación para hacer aparecer la caja desde el centro */
+    }
+    /* Definición de la animación para la caja-dos */
+    @keyframes fadeInFromCenter {
+        0% {
+            opacity: 0;
+            transform: scale(0.5); /* Comienza más pequeño y transparente */
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1); /* Llega al tamaño normal y opacidad completa */
+        }
+    }
+
+    #ecotonal-studio {
+        font-size: 3rem; /* Ajusta el tamaño según sea necesario */
+        text-align: center; /* Centra el texto */
+        margin-bottom: 10rem; /* Espacio inferior para separación */
+    }
+
+
+    /* Estilo para los textos dentro de la caja-dos */
+    .caja-dos .fila {
+        font-size: 4px;
+        width: 100%;
+        text-align: center; /* Centra el texto dentro de cada fila */
+        margin-bottom: 35px; /* Espacio entre las filas */
+        color: #ffffff; /* Texto blanco para resaltar */
+        font-weight: bold;
+    }
+
+    /* Estilo básico para los enlaces dentro de la caja-dos */
+    .enlace {
+        color: #e4d9d9; /* Color blanco para el texto */
+        text-decoration: none; /* Sin subrayado */
+        font-size:2rem; /* Tamaño del texto */
+        font-weight: bold; /* Negrita para resaltar */
+        padding: 15px 40px; /* Espacio alrededor del texto */
+        border: 2px solid rgba(255, 255, 255, 0.8); /* Borde blanco semitransparente */
+        border-radius: 30px; /* Bordes redondeados */
+        background: rgba(0, 0, 0, 0.3); /* Fondo oscuro con algo de transparencia */
+        transition: all 0.3s ease; /* Transición suave para los efectos */
+        text-align: center; /* Centrar el texto */
+        width: auto; /* Asegura que todos los enlaces tengan el mismo ancho */
+        max-width: 300px; /* Ancho máximo para pantallas grandes */
+        display: inline-block; /* Asegura que el padding y el borde se apliquen correctamente */
+    }
+
+    /* Efecto hover para los enlaces */
+    .enlace:hover {
+        background: rgba(255, 255, 255, 0.2); /* Cambia el fondo a un blanco claro al pasar el cursor */
+        color: #ffcc00; /* Cambia el color del texto a amarillo */
+        border-color: #ffcc00; /* Cambia el color del borde a amarillo */
+    }
+
+    /* Efecto activo al hacer clic en el enlace */
+    .enlace:active {
+        transform: scale(0.95); /* Animación para mostrar que se hizo clic */
+        border-color: #ff6600; /* Cambia el color del borde a un tono naranja */
+    }
+}
+
+@media (max-width: 767px) {
+    .video-container {
+        order: -1; /* Coloca el video antes del texto */
+        margin-bottom: 20px; /* Añade un margen debajo del video */
+    }
+
+    .text-item {
+        order: 1; /* Mantiene el texto después del video */
+    }
+}
+
+@media (max-width: 767px) {
+    /* Fondo de la sección */
+    .rehearsal-section {
+        background-color: #333030;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Orden y estilo del contenedor */
+    .container-rehearsal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Estilos del contenedor de texto en móvil */
+    .text-container {
+        order: 1;
+        text-align: center;
+        padding: 20px;
+        color: #ffffff; /* Cambia el color del texto a blanco */
+    }
+
+    /* Ajustes específicos para los elementos de texto */
+    .text-item h1 {
+        font-size: 2.3rem; /* Tamaño de fuente ajustado para el título */
+        margin-bottom: 15px;
+    }
+
+    .text-item span {
+        text-transform: inherit;
+        font-size: 1.8rem; /* Tamaño de fuente ajustado para el texto */
+        line-height: 1.6; /* Ajuste de espacio entre líneas */
+        color: #ffffff; /* Asegura que el texto sea blanco */
+    }
+
+    .por-que {
+        font-size: 2.5rem; /* Tamaño ajustado para "¿Por qué?" */
+        color: #ffffff;
+        margin: 20px 0;
+    }
+
+    .keywords {
+        font-size: 2rem; /* Ajuste para las palabras clave */
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.3); /* Fondo oscuro semitransparente */
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 6px;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Ajuste del tamaño del video en móvil */
+    .video-container iframe {
+        width: 100%; /* Ajusta el ancho al 100% del contenedor */
+        height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+        max-width: 320px; /* Tamaño máximo de ancho */
+        max-height: 180px; /* Tamaño máximo de altura */
+    }
+}
+/* Estilos específicos para Móvil */
+@media (max-width: 767px) {
+    .estudio-grabacion {
+        background-color: #000000; /* Fondo negro */
+        color: #ffffff; /* Asegura que el texto sea blanco para buen contraste */
+        padding: 40px 20px; /* Espaciado alrededor de la sección */
+    }
+    
+    .contenido-estudio-grabacion {
+        max-width: 1200px; /* Limita el ancho para que el contenido no sea demasiado amplio */
+        margin: 0 auto; /* Centra el contenido */
+    }
+    
+    /* Ajuste para el texto */
+    .texto-estudio-grabacion h2 {
+        font-size: 2.5rem; /* Tamaño de fuente del título */
+        margin-bottom: 20px;
+    }
+    
+    .texto-estudio-grabacion p {
+        text-align: justify;
+        font-size: 1.5rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+   /* Ajustes específicos para pantallas móviles */
+@media (max-width: 767px) {
+    .imagen-estudio-grabacion iframe {
+        width: 85%; /* Ocupa el 90% del ancho en móvil */
+        max-width: 300px; /* Tamaño máximo en móvil */
+        height: auto;
+        margin: 20px; /* Centra el video en el contenedor */
+    }
+}
+
+
+
+
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecotonalstudio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bravura&display=swap" rel="stylesheet">
+    <!-- Estilos comunes -->
+    <link rel="stylesheet" href="./assets /css/base.css">
+
+    <!-- Estilos para escritorio -->
+    <link rel="stylesheet" href="./assets /css/desktop.css" media="screen and (min-width: 768px)">
+
+    <!-- Estilos para móvil -->
+    <link rel="stylesheet" href="./assets /css/mobile.css" media="screen and (max-width: 767px)">
+   
+    <link rel="icon" href="ruta/del/favicon.ico" type="image/x-icon">
+
+
+</head>
+<body >
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/logo4.png" alt="Ecotonalstudio Logo">
+                </a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#" class="nav-item">Inicio</a></li>
+                    <li><a href="#" class="nav-item">Sala de Ensayo</a></li>
+                    <li><a href="#" class="nav-item">Estudio de Grabación</a></li>
+                    <li class="reserva"><a href="https://wa.me/9651569704" target="_blank" class="nav-item reserva">Reserva</a></li>                     </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    
+    </nav>
+
+    <section class="home"> 
+        <div class="caja-uno">
+            <!-- Video de YouTube insertado en la CajaUno -->
+            <iframe class="video-youtube" width="560" height="315" src="https://www.youtube.com/embed/OxbmgF76y9k?si=hozL2--IVhpjnKd1&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
+        </div>
+    
+        <div class="caja-dos">
+                <!-- Tres filas de texto, una bajo la otra -->
+                <div class="fila" id="ecotonal-studio">Ecotonal Studio</div>
+                <div class="fila">
+                    <a href="#" class="enlace" id="sala-ensayo">Sala de Ensayo</a>
+                </div>
+                <div class="fila">
+                    <a href="#" class="enlace" id="estudio-grabacion">Estudios de Grabación</a>
+                </div>
+            </div>
+            
+    </section>
+
+<!-- Nueva Sección Sala de Ensayo -->
+    <section class="rehearsal-section">
+         <div class="container-rehearsal" style="display: flex;     justify-content: space-between;">
+            <div class="video-container"        style="margin-top:         120px;">
+                <!-- Video de YouTube insertado en la VideoContainer -->
+                <iframe width="448" height="252" src="https://www.youtube.com/embed/tZ2z0SehFMs?si=fK9a5LcZoBPeZUgf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+              </div>
+
+            <div class="text-container">
+            <div class="text-item">
+                <h1 class="link-item" id="rehearsal-room">Sala de Ensayo</h1>
+                <span>Nuestra sala de ensayo es un espacio único en la zona y no es algo que digamos nosotros, nuestros clientes siempre nos expresan lo diferentes que se siente ensayar y grabar en Pirata.</span>
+                
+                <div class="por-que">¿Por qué?</div>
+        
+                <div class="keywords">Privacidad</div>
+                <div class="keywords">Libertad</div>
+                <div class="keywords">Creatividad primero</div>
+                <div class="keywords">Servicio personalizado</div>
+                <div class="keywords">Equipo</div>
+                <div class="keywords">Experiencia única de monitoreo.</div>
+            </div>
+            </div>
+         </div>
+    </section>
+
+<!-- Nueva Sección Estudio de Grabación -->
+<section  class="estudio-grabacion">
+    <div class="contenido-estudio-grabacion">
+        <div class="imagen-estudio-grabacion"style="margin-top:         10px;">
+            <iframe width="460" height="215" src="https://www.youtube.com/embed/AwLgsl3Wl-8?si=HOZlwJpVDe-Uqyls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      
+        </div>
+        <div class="texto-estudio-grabacion">
+            <h2>Estudio de Grabación</h2>
+            <p>Graba en un estudio que te haga sentir como en casa. En donde puedas expresar tus ideas libremente.
+
+                Nuestro estudio está diseñado para que experimentes una grabación profesional sin tanto cliché como en el pasado caracterizó a esta industria. 
+               </p>
+        </div>
+    </div>
+</section>
+
+<!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <script src="js/script.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+     <!-- Archivo JavaScript -->
+     <script src="./assets /js/script.js"></script>
+</body>
+</html>
