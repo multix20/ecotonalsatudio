@@ -77,9 +77,14 @@ body {
 
 /* Home Section */
 .home {
-    /* Deja otros estilos necesarios aquí */
-    background: none; /* Esto elimina cualquier fondo */
+    width: 100%;
+    height: 100vh;
+    background-image: url('/img/mesa.jpeg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
 /* Animation */
 .navTrigger {
     cursor: pointer;
@@ -176,8 +181,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    margin: 2rem 0; /* Baja la sección .home 3 cm */
+    padding: 1.5rem;
+    margin: rem 0; /* Baja la sección .home 3 cm */
 }
 
 /* Ajustes para la clase caja-uno para ambas versiones */

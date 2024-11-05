@@ -167,7 +167,6 @@
     
     /* Ajuste para la sección home */
     .home {
-        background-color: #111111; /* Fondo negro */
         display: flex;
         flex-direction: column;
         justify-content: flex-start; /* Alinea el contenido desde el inicio para tener control del margen */
