@@ -1,35 +1,36 @@
+/* Base Styles */
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
-    font-size: 62.5%;
-    font-size: 10px;
-    animation: pageFadeIn 1s ease-in-out; /* Añadir animación para el body */
-    background-color: #f8eaea; /* Página blanca al inicio */
-
+    font-family: 'Quicksand', sans-serif;
+    font-size: 62.5%; /* Set base font size for rem calculations */
+    animation: pageFadeIn 1s ease-in-out;
+    background-color: #f8eaea;
 }
 
 @keyframes pageFadeIn {
-   10% {
+    0% {
         opacity: 0;
-        background-color: #ffffff; /* Página completamente blanca al inicio */
     }
-    40% {
-        opacity: 0.5;
-    }
-    90% {
+    100% {
         opacity: 1;
-        background-color: initial; /* Vuelve al color de fondo original de la página */
     }
 }
 
-/* Navbar */
-
-
+/* Navbar Styles */
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    padding: 20px 0;
+    transition: all 0.4s ease;
+    background: radial-gradient(circle, rgba(15, 13, 13, 0.9), rgba(92, 76, 70, 0.7));
+}
 
 .nav div.logo a {
     text-decoration: none;
@@ -44,11 +45,12 @@ body {
 .nav div.main_list {
     height: 65px;
     float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav div.main_list ul {
-    width: 100%;
-    height: 65px;
     display: flex;
     list-style: none;
     margin: 0;
@@ -56,36 +58,94 @@ body {
 }
 
 .nav div.main_list ul li {
-    width: auto;
-    height: 65px;
-    padding: 0;
+    margin-right: 2rem;
+    text-align: left;
 }
 
-/* Estilo básico y minimalista para los enlaces del navbar */
+/* Navbar Links */
 .navlinks .nav-item {
-    color: #ebdddd; /* Texto negro para mejor legibilidad y contraste */
+    color: #ebdddd;
     text-decoration: none;
-    font-size: 1.8rem; /* Tamaño estándar para el texto */
-    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
     display: inline-block;
 }
 
 .navlinks .nav-item:hover {
-    color: #333333; /* Color ligeramente más oscuro al pasar el mouse */
+    color: #333333;
 }
-
 
 /* Home Section */
 .home {
-    background-color: #ffcc00; /* Color amarillo para comprobar si el fondo se muestra */
     width: 100%;
     height: 100vh;
+    background-image: url('/img/mesa.jpeg');
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 0;
 }
 
-/* Animation */
+/* Caja Styles */
+.caja-uno {
+    width: 90%;
+    margin: 3cm 0 2rem 3cm;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+
+.caja-dos {
+    margin-top: 200px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.caja-dos .fila {
+    color: #ffffff;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Link Styles */
+.enlace {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+    display: inline-block;
+}
+
+.enlace:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffcc00;
+    border-color: #ffcc00;
+}
+
+.enlace:active {
+    transform: scale(0.95);
+    border-color: #ff6600;
+}
+
+/* Animation for Menu Icon */
 .navTrigger {
     cursor: pointer;
     width: 30px;
@@ -107,7 +167,7 @@ body {
     height: 4px;
 }
 
-/* Keyframe animations */
+/* Keyframe Animations */
 @keyframes inM {
     50% { transform: rotate(0deg); }
     100% { transform: rotate(45deg); }
@@ -130,301 +190,94 @@ body {
     100% { transform: translateY(9px) rotate(135deg); }
 }
 
-@keyframes inBtm {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-9px) rotate(0deg); }
-    100% { transform: translateY(-9px) rotate(135deg); }
-}
-
-@keyframes outBtm {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-9px) rotate(0deg); }
-    100% { transform: translateY(-9px) rotate(135deg); }
-}
-
-.affix {
-    padding: 0;
-    background-color: #111;
-}
-
-.myH2 {
-    text-align: center;
-    font-size: 4rem;
-}
-
-.myP {
-    text-align: justify;
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 20px;
-}
-
-/* Logo styles */
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: -25px;
-}
-
-.logo a img {
-    max-width: 200%;
-    height: auto;
-    width: 150px;
-}
-
-/* Estilos CSS para ajustar la posición del video en versión móvil y versión desktop */
-
-/* Estilos generales para la sección home */
-.home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
-    margin: rem 0; /* Baja la sección .home 3 cm */
-}
-
-/* Ajustes para la clase caja-uno para ambas versiones */
-.caja-uno {
-    width: 90%;
-    margin: 3cm 0 2rem 3cm; /* Baja la caja 3 cm hacia abajo y la mueve 3 cm a la derecha */
-    display: flex;
-    justify-content: flex-start; /* Mueve el contenido a la izquierda */
-    align-items: center;
-    padding: 1rem;
-}
-
-
-/* Estilos específicos para la versión desktop */
-@media (min-width: 769px) {
+/* Responsive Styles */
+@media (min-width: 768px) {
     .home {
         flex-direction: row;
         align-items: flex-start;
-        padding: 0rem;
-        margin: 0rem 0;
+        padding: 0;
+        margin: 0;
     }
 
     .caja-uno {
         width: 85%;
         margin-top: 5cm;
-        margin-left: 1cm; /* Ajuste específico para la versión desktop */
-        margin-bottom: 2rem;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        margin-left: 1cm;
         padding: 1rem;
     }
 
     .caja-dos {
-    margin-top: 200px;
-    margin-right: 10px;
-    padding: 20px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alinea el contenido dentro de la caja a la izquierda */
-    width: 80%;
-    max-width: 600px;
-}
-
-/* Estilos para el texto dentro de .caja-dos */
-.caja-dos .fila {
-    color: #ffffff; /* Color de texto blanco */
-    font-weight: bold; /* Da énfasis al texto */
-    margin: 10px 0; /* Espacio entre los textos */
-    text-align: center; /* Centra el texto */
-}
-
-/* Media query para pantallas grandes */
-@media (min-width: 1024px) {
-    .caja-dos {
-        padding: 30px 20px; /* Mayor padding en pantallas grandes */
-        width: 70%; /* Más ancho en pantallas grandes */
+        padding: 30px 20px;
+        width: 70%;
     }
-}
 
-/* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
-    .caja-dos {
-        width: 90%; /* Ocupa casi todo el ancho en dispositivos móviles */
-        padding: 15px 10px; /* Ajusta el padding para móviles */
-    }
-    
-}
-
-/* Estilo para centrar la caja-dos */
-.caja-dos {
-    margin-top: 200px;
-    padding: 20px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra todo el contenido dentro de .caja-dos */
-    width: 80%;
-    max-width: 600px;
-}
-
-/* Centrar el contenido dentro de cada .fila */
-.fila {
-    width: 100%;
-    text-align: center; /* Centra el texto dentro del contenedor de la fila */
-    margin-bottom: 10px; /* Añade espacio entre cada fila */
-}
-
-/* Estilo básico para los enlaces */
-.enlace {
-    color: #ffffff; /* Color blanco para el texto */
-    text-decoration: none; /* Sin subrayado */
-    font-size: 2rem; /* Tamaño del texto */
-    font-weight: bold; /* Negrita para resaltar */
-    padding: 15px 40px; /* Espacio alrededor del texto */
-    border: 2px solid rgba(255, 255, 255, 0.8); /* Borde blanco semitransparente */
-    border-radius: 30px; /* Bordes redondeados */
-    background: rgba(0, 0, 0, 0.3); /* Fondo oscuro con algo de transparencia */
-    transition: all 0.3s ease; /* Transición suave para los efectos */
-    text-align: center; /* Centrar el texto */
-    width: 80%; /* Asegura que todos los enlaces tengan el mismo ancho */
-    max-width: 200px; /* Ancho máximo para pantallas grandes */
-    display: inline-block; /* Asegura que el padding y el borde se apliquen correctamente */
-}
-
-/* Efecto hover para los enlaces */
-.enlace:hover {
-    background: rgba(255, 255, 255, 0.2); /* Cambia el fondo a un blanco claro al pasar el cursor */
-    color: #ffcc00; /* Cambia el color del texto a amarillo */
-    border-color: #ffcc00; /* Cambia el color del borde a amarillo */
-    transform: scale(1.05); /* Pequeña animación de agrandamiento */
-}
-
-/* Efecto activo al hacer clic en el enlace */
-.enlace:active {
-    transform: scale(0.95); /* Animación para mostrar que se hizo clic */
-    border-color: #ff6600; /* Cambia el color del borde a un tono naranja */
-}
-
-/* Ajustes específicos para la versión desktop (pantallas grandes) */
-@media (min-width: 1024px) {
-    .enlace {
-        font-size: 2rem; /* Aumenta el tamaño del texto para los enlaces en pantallas grandes */
-        padding: 20px 50px; /* Más espacio para destacar el texto en pantallas grandes */
-    }
-}
-
-/* Estilos generales */
-.rehearsal-section {
-    width: 100%;
-    height: 100vh;
-    background-image: url('/img/fondo.jpeg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.container-rehearsal {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 1200px;
-}
-
-/* Estilos para el video y el contenedor de texto */
-.video-container {
-    flex: 1;
-    margin-top: 120px;
-}
-
-.text-container {
-    font-family: "Quicksand", sans-serif /* Fuente principal del sitio, cambia si es necesario */
-    color: #ffffff; /* Color blanco */
-    text-align: center;
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.text-item span {
-    text-align: justify;
-    font-size: 2rem; /* Aumentamos el tamaño de la fuente */
-    line-height: 2;
-    color: #ffffff; /* Color blanco */
-    display: block;
-    margin-bottom: 20px;
-}
-
-#rehearsal-room {
-    font-size: 3.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
-    font-weight: bold;
-    color: #ffffff; /* Color del texto */
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0) 70%);
-    border-radius: 8px; /* Bordes redondeados para un mejor efecto */
-}
-
-
-/* Estilo especial para la frase "¿Por qué?" */
-.por-que {
-    font-family: 'Pacifico', cursive; /* Cambia a una fuente manuscrita disponible */
-    font-size: 4rem; /* Aumentamos el tamaño de la fuente */
-    color: #ffffff; /* Color blanco */
-    margin: 20px 0;
-}
-
-/* Estilo para cada palabra clave */
-.keywords {
-    display: inline-block; /* Para que cada palabra esté en su propio bloque */
-    padding: 8px 12px; /* Espaciado interno alrededor de cada palabra */
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
-    color: #ffffff; /* Color de texto */
-    border-radius: 15px; /* Bordes redondeados */
-    margin: 5px; /* Espacio entre cada palabra clave */
-    font-size: 2rem; /* Ajusta el tamaño de la fuente según sea necesario */
-    text-align: center; /* Centra el texto dentro del bloque */
-}
-
-
-/* Estilos para la versión de escritorio */
-@media (min-width: 768px) {
     .container-rehearsal {
         flex-direction: row;
         align-items: center;
     }
 
     .video-container {
-        order: 2; /* Para asegurar que el video esté a la derecha */
+        order: 2;
         margin-right: 0;
     }
 
     .text-container {
-        order: 1; /* Colocar el texto a la izquierda en escritorio */
+        order: 1;
         padding: 20px;
     }
 }
 
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        padding-top: 26rem;
+    }
 
+    .caja-uno {
+        display: none;
+    }
 
+    .caja-dos {
+        width: 90%;
+        padding: 15px 20px;
+        margin-left: -50px;
+        margin-top: -10rem;
+        margin-bottom: 1rem;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 30px;
+        animation: fadeInFromCenter 1.5s ease-in-out;
+    }
 
-h1#rehearsal-room {
-    font-size: 3.5rem;
-    color: #ffffff;
-    text-align: center;
-    opacity: 0; /* Inicialmente invisible para el fade-in */
-    animation: fadeInEffect 1.5s ease-in forwards;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-                 0 0 20px rgba(255, 255, 255, 0.6), 
-                 0 0 30px rgba(255, 255, 255, 0.4);
-    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    @keyframes fadeInFromCenter {
+        0% { opacity: 0; transform: scale(0.5); }
+        100% { opacity: 1; transform: scale(1); }
+    }
+
+    .enlace {
+        width: auto;
+    }
 }
 
-h1#rehearsal-room:hover {
-    transform: scale(1.05); /* Agranda ligeramente al pasar el mouse */
-    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.8); /* Sombra más fuerte en hover */
+@media (max-width: 767px) {
+    .video-container iframe {
+        width: 100%;
+        height: auto;
+        max-width: 320px;
+        max-height: 180px;
+    }
+
+    .imagen-estudio-grabacion iframe {
+        width: 85%;
+        max-width: 300px;
+        height: auto;
+        margin: 20px;
+    }
 }
 
+/* Keyframes for Animation */
 @keyframes fadeInEffect {
     from {
         opacity: 0;
@@ -436,17 +289,10 @@ h1#rehearsal-room:hover {
     }
 }
 
-.estudio-grabacion {
+/* Section Styles for Rehearsal and Recording */
+.rehearsal-section, .estudio-grabacion {
     width: 100%;
     height: 100vh;
-    background-image: url('/img/bateria.jpeg');
-}
-
-/* Estilos para la sección de Estudio de Grabación */
-.estudio-grabacion {
-    width: 100%;
-    height: 100vh;
-    background-image: url('/img/mesados.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -454,90 +300,25 @@ h1#rehearsal-room:hover {
     justify-content: center;
 }
 
-.contenido-estudio-grabacion {
+.rehearsal-section {
+    background-image: url('/img/fondo.jpeg');
+}
+
+.estudio-grabacion {
+    background-image: url('/img/mesados.jpg');
+}
+
+/* Rehearsal and Recording Containers */
+.container-rehearsal, .contenido-estudio-grabacion {
     display: flex;
     justify-content: space-between;
     width: 90%;
     max-width: 1200px;
 }
 
-/* Estilos para el video y el contenedor de texto en Estudio de Grabación */
-.imagen-estudio-grabacion {
-    flex: 1;
-    margin-top: 120px;
-}
-
-.texto-estudio-grabacion {
-    font-family: "Quicksand", sans-serif;
+.text-container, .texto-estudio-grabacion {
+    font-family: 'Quicksand', sans-serif;
     color: #ffffff;
     text-align: center;
     padding: 20px;
     max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Estilos para el h2 en Estudio de Grabación */
-.texto-estudio-grabacion h2 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    border-radius: 8px;
-    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Transiciones suaves */
-}
-
-/* Efecto de resplandor y desplazamiento en hover */
-.texto-estudio-grabacion h2:hover {
-    transform: translateY(-5px); /* Desplaza el texto ligeramente hacia arriba */
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-                 0 0 20px rgba(255, 255, 255, 0.6); /* Efecto de resplandor */
-}
-
-
-.texto-estudio-grabacion p {
-    text-align: justify;
-    font-size: 2rem;
-    line-height: 2;
-    color: #ffffff;
-    display: block;
-    margin-bottom: 20px;
-}
-
-/* Estilo especial para frase destacada */
-.por-que-grabacion {
-    font-family: 'Pacifico', cursive;
-    font-size: 4rem;
-    color: #ffffff;
-    margin: 20px 0;
-}
-
-/* Estilo para cada palabra clave en Estudio de Grabación */
-.keywords-grabacion {
-    font-size: 2rem;
-    font-weight: 400;
-    color: #ffffff;
-    margin: 10px 0;
-}
-/* Estilos generales para el video */
-.youtube-video {
-    width: 80%; /* Ajusta el ancho del video al 80% del contenedor */
-    max-width: 480px; /* Tamaño máximo en escritorio */
-    height: auto; /* Mantiene la proporción del video */
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para el video */
-}
-
-@font-face {
-    font-family: 'Bravura';
-    src: url('fonts/Bravura.woff2') format('woff2'),
-         url('fonts/Bravura.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    font-family: 'Bravura', sans-serif;
-}
