@@ -77,9 +77,9 @@ body {
 
 /* Home Section */
 .home {
+    background-color: #ffcc00; /* Color amarillo para comprobar si el fondo se muestra */
     width: 100%;
     height: 100vh;
-    background-image: url('/mesa.jpeg');
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
